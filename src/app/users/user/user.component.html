@@ -1,0 +1,8 @@
+<div *ngIf="user != null; else noUser">
+    <p>User with ID {{user.id}} loaded.</p>
+    <p>User name is {{user.name}}</p>
+</div>
+<ng-template #noUser>
+    <p>No user selected</p>
+</ng-template>
+<a [routerLink]="['/users', 10, 'Anna']">Load Anna...</a>
